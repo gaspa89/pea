@@ -31,6 +31,9 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/js/swiper.min.js', array(), null, true);
+    wp_enqueue_script('swiper-css', 'https://unpkg.com/swiper/css/swiper.min.css', array());
+
 }
 
 function add_child_theme_textdomain() {

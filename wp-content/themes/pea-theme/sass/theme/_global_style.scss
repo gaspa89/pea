@@ -3,3 +3,79 @@ body{
 	font-size: $font-size-base;
 	color: $black;
 }
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+// HOMEPAGE
+.immagine_hero 
+{
+  height:100vh;
+  background-size:cover;
+  color: $white;
+
+  	.titolo_hero{
+		font-size: 3.5rem;
+		line-height: 4.125rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.lista_hero{
+		li{
+			padding:.8rem 2rem .8rem 0;
+			line-height: 1.1rem;
+			&::before{
+				font-family: "Fontawesome";
+				content: "\f058";
+				display: inline-block;
+				font-size: 1.5rem;
+				margin-right: 1.1rem;
+				color: $primary;
+			}
+		}
+	}
+
+	.btn{
+		border-radius: 50px;
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-family: $font-family-rubik;
+		padding:1.125rem 2.6rem;
+		margin-top: 1.25rem;
+	}
+
+}
+
+.slider_homepage{
+	margin-top: 3rem;
+
+	.slider_controller{
+		font-family: $font-family-rubik;
+		text-transform: uppercase;
+		margin-bottom: 4rem;
+
+		.icona_container {
+			width: 60%;
+			margin: 0 auto;
+			margin-bottom: .5rem;
+
+			.icona_slider {
+				position: relative;
+				border-radius: 50%;
+				width: 100%;
+				height: auto; 
+				padding-top:50%;
+				background:$primary
+			}
+		}
+	}
+
+	.slider_text{
+		background-color:$primary;
+		color: $white;
+		padding: 4.375rem 4rem;
+	}
+}
+

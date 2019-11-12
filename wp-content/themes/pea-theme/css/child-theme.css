@@ -11688,22 +11688,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Rubik", sans-serif;
   font-weight: bold; }
 
+.navbar {
+  padding: 1.3rem 1rem !important; }
+
 .navbar-nav {
   color: #FFFFFF; }
-  .navbar-nav .menu-item {
-    padding: 0 .726rem;
-    margin: 0 .525rem; }
-    .navbar-nav .menu-item.active {
-      border-bottom: 1px solid #FFFFFF; }
   .navbar-nav .nav-link {
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
-    color: #FFFFFF !important; }
+    color: #FFFFFF !important;
+    padding: .5125rem 1.725rem !important; }
+    .navbar-nav .nav-link:hover {
+      border-bottom: 2px solid #FFFFFF; }
 
 li.area_riservata_btn_menu a {
   border: 2px solid #fff;
-  padding: 10px 20px;
-  border-radius: 50px; }
+  border-radius: 50px;
+  text-transform: capitalize; }
 
 .navbar-toggler {
   border: none;
@@ -11860,6 +11861,59 @@ body {
   font-family: "Karla", sans-serif, sans-serif;
   font-size: 1rem;
   color: #2B1F21; }
+
+ul {
+  padding-left: 0;
+  list-style-type: none; }
+
+.immagine_hero {
+  height: 100vh;
+  background-size: cover;
+  color: #FFFFFF; }
+  .immagine_hero .titolo_hero {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+    margin-bottom: 1.25rem; }
+  .immagine_hero .lista_hero li {
+    padding: .8rem 2rem .8rem 0;
+    line-height: 1.1rem; }
+    .immagine_hero .lista_hero li::before {
+      font-family: "Fontawesome";
+      content: "\f058";
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-right: 1.1rem;
+      color: #E07100; }
+  .immagine_hero .btn,
+  .immagine_hero .wpcf7 input[type=submit], .wpcf7 .immagine_hero input[type=submit] {
+    border-radius: 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    padding: 1.125rem 2.6rem;
+    margin-top: 1.25rem; }
+
+.slider_homepage {
+  margin-top: 3rem; }
+  .slider_homepage .slider_controller {
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 4rem; }
+    .slider_homepage .slider_controller .icona_container {
+      width: 60%;
+      margin: 0 auto;
+      margin-bottom: .5rem; }
+      .slider_homepage .slider_controller .icona_container .icona_slider {
+        position: relative;
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        padding-top: 50%;
+        background: #E07100; }
+  .slider_homepage .slider_text {
+    background-color: #E07100;
+    color: #FFFFFF;
+    padding: 4.375rem 4rem; }
 
 /*
 * Use existing Bootstrap 4 classes and
