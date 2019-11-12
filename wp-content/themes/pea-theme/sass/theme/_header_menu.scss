@@ -1,0 +1,27 @@
+.navbar-nav{
+	color: $white;
+	.menu-item {
+		padding: 0 .726rem;
+		margin: 0 .525rem;
+		&.active{
+			border-bottom: 1px solid $white;
+		}
+		
+	}
+
+	.nav-link { 
+		font-family: $font-family-rubik;
+		text-transform: uppercase;
+        color: $white !important;         
+    }
+}
+
+li.area_riservata_btn_menu{ 
+	a{ 
+		border: 2px solid #fff; 
+		padding:10px 20px; 
+		border-radius: 50px;
+
+	}
+}
+

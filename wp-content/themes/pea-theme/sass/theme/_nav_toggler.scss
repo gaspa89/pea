@@ -1,0 +1,62 @@
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+    margin-bottom: 0.625rem;
+    padding: 0.25rem 1rem;
+
+    &:focus { outline: 0px !important; }
+
+    .top-bar { animation: inT .8s normal forwards; }
+    .middle-bar { animation: inM .8s forwards; margin: 5px 0}
+    .bottom-bar { animation: inBtm .8s forwards; }
+
+    &.collapsed{
+
+        .top-bar { animation: outT .8s reverse backwards; }
+        .middle-bar { animation: outM .8s reverse backwards; }
+        .bottom-bar { animation: outBtm .8s reverse backwards; }
+
+    }
+}
+
+.icon-bar {
+    width: 30px;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+    background-color: $white;
+}
+
+@keyframes inM{
+    50%{transform:rotate(0deg);}
+    100%{transform:rotate(45deg);}
+}
+
+@keyframes outM{
+    50%{transform:rotate(0deg);}
+    100%{transform:rotate(45deg);}
+}
+
+@keyframes inT{
+    0%{transform: translateY(0px) rotate(0deg);}
+    50%{transform: translateY(9px) rotate(0deg);}
+    100%{transform: translateY(9px) rotate(135deg);}
+}
+
+@keyframes outT{
+    0%{transform: translateY(0px) rotate(0deg);}
+    50%{transform: translateY(9px) rotate(0deg);}
+    100%{transform: translateY(9px) rotate(135deg);}
+}
+
+@keyframes inBtm{
+    0%{transform: translateY(0px) rotate(0deg);}
+    50%{transform: translateY(-9px) rotate(0deg);}
+    100%{transform: translateY(-9px) rotate(135deg);}
+}
+
+@keyframes outBtm{
+    0%{transform: translateY(0px) rotate(0deg);}
+    50%{transform: translateY(-9px) rotate(0deg);}
+    100%{transform: translateY(-9px) rotate(135deg);}
+}
