@@ -2,6 +2,8 @@ body{
 	font-family: $font-family-karla, sans-serif;
 	font-size: $font-size-base;
 	color: $black;
+
+	overflow-x: hidden;
 }
 
 ul {
@@ -47,14 +49,20 @@ ul {
 	}
 
 }
+	.icon_background{color: $primary}
 
+
+//Section Slider homepage
 .slider_homepage{
 	margin-top: 3rem;
 
 	.slider_controller{
 		font-family: $font-family-rubik;
 		text-transform: uppercase;
+		font-size: .875rem;
 		margin-bottom: 4rem;
+
+		&.active{ color: $primary; }
 
 		.icona_container {
 			width: 60%;
@@ -62,12 +70,17 @@ ul {
 			margin-bottom: .5rem;
 
 			.icona_slider {
-				position: relative;
-				border-radius: 50%;
-				width: 100%;
-				height: auto; 
-				padding-top:50%;
-				background:$primary
+			    width: 90px;
+			    height: 90px;
+			    border-radius: 50%;
+			    text-align: center;
+			    vertical-align: middle;
+			    -webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				&:hover{background: $primary;}
 			}
 		}
 	}
@@ -79,3 +92,56 @@ ul {
 	}
 }
 
+//Section Reviews Homepage
+.reviews{
+	padding:4rem 8rem;
+	background:$marrone;
+	color: $white;
+	text-align: center;
+
+	p.titolo_recensione{font-size: 1.4375rem}
+
+	.swiper-pagination{
+		position: relative;
+		bottom:0;
+	}
+
+	.nome_recensione{
+		font-family: $font-family-rubik;
+		font-size: .875rem;
+		text-transform: uppercase;
+	}
+
+	.swiper-container{
+		max-width: 100%;
+
+		.swiper-wrapper{
+			min-height: 100px;
+			margin-bottom: 2rem !important;
+		}
+
+		.swiper-slide {
+		 	width: 50%;
+	     	text-align: center;
+	     	font-size: 18px;
+	    
+	     	.icona_recensione{
+	     		margin-bottom: 1rem;
+	     	}
+	    }
+	}
+}
+
+//Section call2action
+.call2action{
+	padding: 8.25rem 5rem;
+	text-align: center;
+	h3{
+		font-size: 2.25rem;
+		margin-bottom: 0;
+	}
+	h2{
+		color: $primary;
+		font-size: 2.25rem;
+	}
+}

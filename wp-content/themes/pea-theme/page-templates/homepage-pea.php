@@ -22,7 +22,7 @@ $servizi_home = get_field('servizi_home');
 <section class="homepage_hero_slogan immagine_hero" style="background-image: url(<?php echo $immagine_hero[0] ?>);">
     <div class="row align-items-center h-100">
 		<div class="container">
-			<div class="w-50">
+			<div class="w-md-50 px-3 p-md-0">
 	    		<h1 class="titolo_hero">
 	    			<?php echo $titolo_hero ?>
 	    		</h1>
@@ -65,6 +65,21 @@ $servizi_home = get_field('servizi_home');
 		</div><!-- .row end -->
 
 	</div><!-- #content -->
+
+	<!-- Sezione Recensioni -->
+	<div class="container-fluid p-0">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'loop-templates/content-homepage', 'reviews' ); ?>
+		<?php endwhile; // end of the loop. ?>
+	</div>
+
+	
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'loop-templates/content-homepage', 'call2action' ); ?>
+		<?php endwhile; // end of the loop. ?>
+	</div>
+
 
 </div><!-- #full-width-page-wrapper -->
 

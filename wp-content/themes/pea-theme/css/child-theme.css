@@ -11860,7 +11860,8 @@ li.area_riservata_btn_menu a {
 body {
   font-family: "Karla", sans-serif, sans-serif;
   font-size: 1rem;
-  color: #2B1F21; }
+  color: #2B1F21;
+  overflow-x: hidden; }
 
 ul {
   padding-left: 0;
@@ -11893,27 +11894,78 @@ ul {
     padding: 1.125rem 2.6rem;
     margin-top: 1.25rem; }
 
+.icon_background {
+  color: #E07100; }
+
 .slider_homepage {
   margin-top: 3rem; }
   .slider_homepage .slider_controller {
     font-family: "Rubik", sans-serif;
     text-transform: uppercase;
+    font-size: .875rem;
     margin-bottom: 4rem; }
+    .slider_homepage .slider_controller.active {
+      color: #E07100; }
     .slider_homepage .slider_controller .icona_container {
       width: 60%;
       margin: 0 auto;
       margin-bottom: .5rem; }
       .slider_homepage .slider_controller .icona_container .icona_slider {
-        position: relative;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
-        width: 100%;
-        height: auto;
-        padding-top: 50%;
-        background: #E07100; }
+        text-align: center;
+        vertical-align: middle;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        .slider_homepage .slider_controller .icona_container .icona_slider:hover {
+          background: #E07100; }
   .slider_homepage .slider_text {
     background-color: #E07100;
     color: #FFFFFF;
     padding: 4.375rem 4rem; }
+
+.reviews {
+  padding: 4rem 8rem;
+  background: #2B1F21;
+  color: #FFFFFF;
+  text-align: center; }
+  .reviews p.titolo_recensione {
+    font-size: 1.4375rem; }
+  .reviews .swiper-pagination {
+    position: relative;
+    bottom: 0; }
+  .reviews .nome_recensione {
+    font-family: "Rubik", sans-serif;
+    font-size: .875rem;
+    text-transform: uppercase; }
+  .reviews .swiper-container {
+    max-width: 100%; }
+    .reviews .swiper-container .swiper-wrapper {
+      min-height: 100px;
+      margin-bottom: 2rem !important; }
+    .reviews .swiper-container .swiper-slide {
+      width: 50%;
+      text-align: center;
+      font-size: 18px; }
+      .reviews .swiper-container .swiper-slide .icona_recensione {
+        margin-bottom: 1rem; }
+
+.call2action {
+  padding: 8.25rem 5rem;
+  text-align: center; }
+  .call2action h3 {
+    font-size: 2.25rem;
+    margin-bottom: 0; }
+  .call2action h2 {
+    color: #E07100;
+    font-size: 2.25rem; }
+
+.wrapper-footer {
+  background-color: #2B1F21;
+  border-top: 11px solid #E07100;
+  padding: 2.5rem 0;
+  color: #FFFFFF; }
 
 /*
 * Use existing Bootstrap 4 classes and

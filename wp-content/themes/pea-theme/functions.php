@@ -8,6 +8,7 @@ show_admin_bar( false );
 //Paths personalizzate tema
 include_once get_stylesheet_directory() . '/theme-path.php';
 
+add_image_size( 'slide_servizio', 760, 510, true );
 
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
@@ -32,7 +33,11 @@ function theme_enqueue_styles() {
         wp_enqueue_script( 'comment-reply' );
     }
     wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/js/swiper.min.js', array(), null, true);
-    wp_enqueue_script('swiper-css', 'https://unpkg.com/swiper/css/swiper.min.css', array());
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/css/swiper.min.css', array());
+
+    //flickity
+    wp_enqueue_script('flickity-js', get_stylesheet_directory_uri() . '/src/js/flickity.pkgd.min.js', array(), null, true);
+    wp_enqueue_style('flickity-css', get_stylesheet_directory_uri() . '/src/flickity.css', array());
 
 }
 
@@ -54,3 +59,30 @@ function pea_custom_logo(){
     $html = '<img src="' . get_stylesheet_directory_uri() .'/src/assets/logo-agenzia-Pea-white.svg">';
     return $html;
 }
+
+//register custom footer sidebar
+$args_footer_1 = array(
+    'name'          => __( 'Footer 1 colonna', 'pea-child' ),
+    'id'            => 'footer-1',    // ID should be LOWERCASE  ! ! !
+    'before_widget' => '',
+    'after_widget'  => '',
+    ); 
+register_sidebar( $args_footer_1 );
+
+//register custom footer sidebar
+$args_footer_2 = array(
+    'name'          => __( 'Footer 2 colonna', 'pea-child' ),
+    'id'            => 'footer-2',    // ID should be LOWERCASE  ! ! !
+    'before_widget' => '',
+    'after_widget'  => '',
+    ); 
+register_sidebar( $args_footer_2 );
+
+//register custom footer sidebar
+$args_footer_3 = array(
+    'name'          => __( 'Footer 3 colonna', 'pea-child' ),
+    'id'            => 'footer-3',    // ID should be LOWERCASE  ! ! !
+    'before_widget' => '',
+    'after_widget'  => '',
+    ); 
+register_sidebar( $args_footer_3 );
