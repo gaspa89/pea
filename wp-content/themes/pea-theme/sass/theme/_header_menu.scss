@@ -19,9 +19,10 @@
         color: $white !important;
         padding: .5125rem 1.725rem !important;
         font-weight: 700;
-        
+        transition: all 0.3s ease-in-out;
+
         &:hover{
-			border-bottom: 2px solid $white;
+			transform: translateY(-5px);
 		}         
     }
 }

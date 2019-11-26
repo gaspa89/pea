@@ -45,11 +45,12 @@
 				$immagine_servizio = get_the_post_thumbnail_url( $query_servizi->ID, 'slide_servizio', false );
 				?>
 			
-				<div class="swiper-slide" style="height: 520px">
+				<div class="swiper-slide" style="height: 560px">
 					<div class="row h-100">
 						<div class="col-md-4 slider_text">
 							<h2><?php echo $slogan_titolo ?></h2>
 							<p><?php echo $descrizione_breve; ?></p>
+							<a href="#" class="btn btn-black">Scopri di più</a>
 						</div>
 						<div class="col-md-8 slider_image p-0" style="background-image: url(<?php echo $immagine_servizio ?>); background-repeat: no-repeat; background-size: cover;">
 						</div>
