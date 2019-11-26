@@ -1,6 +1,16 @@
 .navbar{
 	padding: 1.3rem 1rem !important;
+	-webkit-transition: all ease-out .5s;
+  	-moz-transition: all ease-out .5s;
+  	-o-transition: all ease-out .5s;
+  	transition: all ease-out .5s;
+
+	&.nav_active{
+		background-color: $primary;
+		padding: 0.8rem !important;
+	}
 }
+
 .navbar-nav{
 	color: $white;
 	.nav-link { 
@@ -8,7 +18,8 @@
 		text-transform: uppercase;
         color: $white !important;
         padding: .5125rem 1.725rem !important;
-
+        font-weight: 700;
+        
         &:hover{
 			border-bottom: 2px solid $white;
 		}         
@@ -23,3 +34,8 @@ li.area_riservata_btn_menu{
 	}
 }
 
+.navbar-brand {
+	img{
+		width: 161px;
+	}
+}

@@ -11,7 +11,7 @@ ul {
 	list-style-type: none;
 }
 
-// HOMEPAGE
+//---------------------------------------------------- HOMEPAGE
 .immagine_hero 
 {
   height:100vh;
@@ -46,18 +46,20 @@ ul {
 		font-family: $font-family-rubik;
 		padding:1.125rem 2.6rem;
 		margin-top: 1.25rem;
+		font-weight: bold;
 	}
 
 }
-	.icon_background{color: $primary}
+.icon_background{color: $primary}
 
 
-//Section Slider homepage
+//---------------------------------------------------- Section Slider homepage
 .slider_homepage{
 	margin-top: 3rem;
 
 	.slider_controller{
 		font-family: $font-family-rubik;
+		font-weight: bold;
 		text-transform: uppercase;
 		font-size: .875rem;
 		margin-bottom: 4rem;
@@ -65,7 +67,7 @@ ul {
 		&.active{ color: $primary; }
 
 		.icona_container {
-			width: 60%;
+
 			margin: 0 auto;
 			margin-bottom: .5rem;
 
@@ -75,12 +77,19 @@ ul {
 			    border-radius: 50%;
 			    text-align: center;
 			    vertical-align: middle;
-			    -webkit-transition: all 0.5s ease-in-out;
-				-moz-transition: all 0.5s ease-in-out;
-				-ms-transition: all 0.5s ease-in-out;
-				-o-transition: all 0.5s ease-in-out;
 				transition: all 0.5s ease-in-out;
-				&:hover{background: $primary;}
+				margin: 0 auto; 
+				&:hover{
+					background: $primary;
+				}
+			}
+		}
+	}
+
+	.swiper-slide-thumb-active{
+		.icona_container{
+			.icona_slider{
+				background: $primary;
 			}
 		}
 	}
@@ -92,7 +101,7 @@ ul {
 	}
 }
 
-//Section Reviews Homepage
+////---------------------------------------------------- Section Reviews Homepage
 .reviews{
 	padding:4rem 8rem;
 	background:$marrone;
@@ -132,7 +141,7 @@ ul {
 	}
 }
 
-//Section call2action
+//---------------------------------------------------- Section call2action footer
 .call2action{
 	padding: 8.25rem 5rem;
 	text-align: center;
@@ -144,4 +153,134 @@ ul {
 		color: $primary;
 		font-size: 2.25rem;
 	}
+}
+
+#map-footer{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+//---------------------------------------------------- INTERNAL HERO 
+.internal_hero_slogan{
+	background-size:cover;
+	color: $white;
+	height: 340px;
+
+	h1.titolo_pagina{
+		font-size: 56px;
+		padding-bottom: 50px;
+	}
+}
+
+// -------------------------------------------------- PAGINA CONTATTI
+.metodi-contatto{
+	padding: 3rem 0;
+
+	.blocco-contatto{
+		text-align: center;
+		font-weight: 300;
+		.quadrato-contatto{
+			border-radius: 5px;
+			border: 2px solid #F2F2F2;
+			
+			img{
+				padding:2.5rem 0 0.5rem 0;
+				width: 50px;
+			}
+			font-size: 20px;
+			font-weight: 300;
+			color: #2B1F21;
+
+		}
+	}
+}
+
+
+.mappa-contatti{
+	#mappa-contatti{
+		width: 100%;
+		height: 460px;
+	}
+}
+
+.indicazioni-mappa{
+	background-color: $primary;
+	color: $white;
+}
+
+.btn.pulsante-cta{
+	background-color:$primary;
+	border: 2px solid $white;
+	color: $white !important;
+	border-radius: 50px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: $font-family-rubik;
+	font-weight: 700;
+	padding:0.6rem 1.8rem;
+}
+
+input.hideradio{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+.imgradio label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+    max-width: 70%;
+    transition: all 0.3s ease-in-out;
+}
+.imgradio label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    background-color:$primary;
+    border-radius: 50%;
+}
+
+.imgradio label > input:checked + div {
+	color: $primary;
+}
+
+.imgradio{
+	width: 100%;
+	.icona_container {
+
+	margin: 0 auto;
+	margin-bottom: .5rem;
+
+	.icona_slider {
+	    width: 90px;
+	    height: 90px;
+	    border-radius: 50%;
+	    text-align: center;
+	    vertical-align: middle;
+		transition: all 0.5s ease-in-out;
+		margin: 0 auto; 
+			&:hover{
+				background: $primary;
+			}
+		}
+	}
+}
+.pulsante-form{
+	border-radius:50px !important;
+	background-color: #000 !important;
+	color: $white !important;
+	border: 0 !important;
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+	transition: all 0.3s ease-in-out !important; 
+
+	&:hover{
+		transform: translateY(-5px);
+		background-color: $primary !important;
+	}
+
+}
+
+input:focus[type=search]{
+  background-color:transparent !important;
+  box-shadow: none !important;
+
 }
