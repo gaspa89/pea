@@ -1,0 +1,48 @@
+.wrapper-footer{
+	.wpcf7-form{
+		.wpcf7-text, .wpcf7-textarea{
+			background-color: #464646 !important;
+			border: 0 !important;
+			color: $white !important;
+			font-size: .875rem !important;
+		}
+
+		.wpcf7-submit{
+			border-radius:50px !important;
+		}
+
+		.wpcf7-response-output{
+			&.wpcf7-validation-errors{
+				background-color: #dc3545 !important;
+				color: $white !important;
+				border: none !important;
+				height: initial !important;
+			}
+		}
+		div.wpcf7-response-output{margin: 0 !important; font-size: .875rem !important; }
+	}
+}
+
+.form-contatto{
+	.wpcf7{
+		max-width: 100%;
+	
+		.row{
+			margin-bottom: 1rem;
+		}
+		input[type=text], input[type=tel], input[type=email], .wpcf7-textarea{
+			padding:1.3rem 1rem;
+			background-color: #F2F2F2;
+			color: #959595;
+			border: 0;
+		}
+
+		.wpcf7-list-item{
+			width: 50%;
+			margin:0;
+			&.last{padding-left: 15px;}
+		}
+		
+
+	}
+}
