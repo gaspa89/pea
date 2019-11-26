@@ -9,7 +9,7 @@ $query_reviews = new WP_Query($array_reviews);
 if($query_reviews->have_posts()): ?>
 
 	<section class="reviews">
-		<div class="swiper-container">
+		<div class="swiper-container gallery-reviews">
     		<div class="swiper-wrapper">
     <?php
 	while($query_reviews->have_posts()): $query_reviews->the_post();

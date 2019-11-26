@@ -12,27 +12,31 @@
 	if($query_servizi->have_posts()):
 	?>
 	<div class="row">
-	<?php
-		while ($query_servizi->have_posts()): $query_servizi->the_post();
-			
-			$icona_slider = get_field('icona_pagina', $query_servizi->ID);
-			
-		?>
-		<div class="col-md-2 text-center slider_controller active">
-			<div class="icona_container">
-				<div class="icona_slider">
-					<img src="<?php echo $icona_slider['url']; ?>">
-				</div>
+		<div class="swiper-container gallery-thumbs-icone w-100">
+			<div class="swiper-wrapper justify-content-between w-100">
+				<?php
+					while ($query_servizi->have_posts()): $query_servizi->the_post();
+						$icona_slider = get_field('icona_pagina', $query_servizi->ID);
+					?>
+					<div class="swiper-slide">
+						<div class="text-center slider_controller">
+							<div class="icona_container">
+								<div class="icona_slider">
+									<img src="<?php echo $icona_slider['url']; ?>">
+								</div>
+							</div>
+							<?php echo get_the_title(); ?>	
+						</div>
+					</div>
+					<?php
+					endwhile;
+				?>
 			</div>
-			<?php echo get_the_title(); ?>	
 		</div>
-		<?php
-		endwhile;
-	?>
 	</div>
-		<div class="swiper-container">
+	
+		<div class="swiper-container gallery-home mb-5">
 			<div class="swiper-wrapper">
-			<div class="row">	
 			<?php
 			while ($query_servizi->have_posts()): $query_servizi->the_post();
 			
@@ -40,22 +44,25 @@
 				$descrizione_breve = get_field('descrizione_breve_servizio', $query_servizi->ID);
 				$immagine_servizio = get_the_post_thumbnail_url( $query_servizi->ID, 'slide_servizio', false );
 				?>
-				<div class="swiper-slide">
-					<div class="col-md-4 slider_text">
-						<h2><?php echo $slogan_titolo ?></h2>
-						<p><?php echo $descrizione_breve; ?></p>
-					</div>
-					<div class="col-md-8 slider_image p-0">
-						<img src="<?php echo $immagine_servizio ?>">
+			
+				<div class="swiper-slide" style="height: 520px">
+					<div class="row h-100">
+						<div class="col-md-4 slider_text">
+							<h2><?php echo $slogan_titolo ?></h2>
+							<p><?php echo $descrizione_breve; ?></p>
+						</div>
+						<div class="col-md-8 slider_image p-0" style="background-image: url(<?php echo $immagine_servizio ?>); background-repeat: no-repeat; background-size: cover;">
+						</div>
 					</div>
 				</div>
+					
+				
 			<?php
 			endwhile;
-		?>
-			</div>
-			
+		?>		
 			</div>
 		</div>
+
 	<?php 
 	endif;
 	wp_reset_postdata();
