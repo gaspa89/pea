@@ -63,9 +63,9 @@
 
     //aggiunta background alla navbar allo scroll  
     $(window).on("scroll", function() {
-       var altezzaHeroSlogan = document.getElementById('hero_slogan').offsetHeight;
-       var offsetAltezza = altezzaHeroSlogan - 120;
-        if($(window).scrollTop() > offsetAltezza) {
+       // var altezzaHeroSlogan = document.getElementById('hero_slogan').offsetHeight;
+       // var offsetAltezza = altezzaHeroSlogan - 120;
+        if($(window).scrollTop() > 5) {
             $(".navbar").addClass("nav_active");
             $('.navbar .navbar-brand img').attr('src', themeURL + '/src/assets/logo-agenzia-Pea-scroll.svg');
         } else {
